@@ -12,9 +12,12 @@ class book
             cin>>title>>author>>page>>price>>id;
         }
     
-    void display()
+    void display( int d)
     {
+        if(id==d)
+        {
         cout<<"ID "<<id<<"price "<<price<<"page "<<page<<"author "<<author<<"title "<<title;
+    }
     }
 };
 int main()
@@ -24,18 +27,17 @@ int main()
     {
         b[i].get();
     }
+
     cout<<"enter the book id to be searched"<<endl;
     cin>>d;
     for(int i=0; i<5;i++)
     {
-        if(b[i].id==d)
-        {
-            b[i].display();
+    
+            b[i].display(d);
+        
         }
-        else
-        {
-            cout<<"not found";
-        }
-    }
+        
+    
+    
     return 0;
 }
